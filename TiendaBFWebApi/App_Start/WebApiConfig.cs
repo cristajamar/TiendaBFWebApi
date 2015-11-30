@@ -11,6 +11,18 @@ namespace TiendaBFWebApi
         {
             // Web API configuration and services
 
+            var json = config.Formatters.JsonFormatter;
+            json.SerializerSettings.PreserveReferencesHandling =
+                Newtonsoft.Json.PreserveReferencesHandling.Objects;
+
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            UnityConfig.RegisterComponents();
+
+            //Cors
+            config.EnableCors();
+
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
