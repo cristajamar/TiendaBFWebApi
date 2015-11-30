@@ -1,5 +1,6 @@
 using Microsoft.Practices.Unity;
 using System.Web.Http;
+using TiendaBFWebApi.App_Start;
 using Unity.WebApi;
 
 namespace TiendaBFWebApi
